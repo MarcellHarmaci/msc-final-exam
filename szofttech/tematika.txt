@@ -1,0 +1,15 @@
+1. Introduction: Software Development Philosophies and Contradictions
+
+A) Process
+2. Software Lifecycle and Software Development Process
+3. Software Development Models (from Waterfall to Agile and Lean)
+4. Software Development Methodologies (Scrum, Kanban, XP, TDD, MDD...)
+5. User stories, UX, Story-Driven Modeling, UDD, Persona-Scenario-Use case
+6. DevOps toolchain: code review, merging, version control, continuous integration, testing, artifact repository, release automation, monitoring
+7. Other ways of verification: static analysis, coding conventions, testing levels, issue tracking, profiling
+
+B) Architecture
+8. Object Oriented Principles, Modelling and Design, SOLID, Shlaer-Mellor method, UML and xtUML
+9. Architectural Improvements: Refactoring vs Object Normalization vs Design Patterns (and anti-patterns)
+10. Creational, Structural, Behavioral and Concurrency Design Patterns
+11. Architectural Patterns: Front Controller, Multitier, Publish-Subscribe, MVC, MVVM, Service Locator, Dependency Injection, IoC, SOA, Peer-to-Peer, REST...
