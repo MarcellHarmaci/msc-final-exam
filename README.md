@@ -1,63 +1,19 @@
-# kérdések
-1. védés menete
-1. "kapcsolódó kérdések" jellege?
-1. diasor tartalma
-
-# védés
+# Védés
+- kb 30 perc összesen
 - előadás max 15p (1-2p/dia)
-- kérdések
+- kérdések:
   - védéshez kapcsolódó
-  - 3 tágyhoz kapcsolódó
+  - 3 választott tágyhoz kapcsolódó
 
-kb 30 perc együtt
+### Bizottság
+- Kozsik Tamás (elnök)
+- Laki Sándor
+- Kaposi Ambrus
+- Sinkovics Ábel külső tag
 
 
 
-# diasor
-technikai részéetek nem nagyon - SPG, gen_db nem kéne magyarázni
 
-__inkább mese__
-
-1. címlap: cím, 3 mondat hogy mivel
-1. motiváció: referl(erl stat elemző), SPG reprezentálja a kódot, adatbázis réteg tárol &rarr; tegyük gyorsabbá IDE-ben "könnyűsúlyú" adatréteget
-1. részletekről dia lehet: referl rétegek, SPG példa, (referl db-kről nem kell)
-  1. megfelelő adatstruktúra kiv. táblázat, diagram
-élcímézett gráfot tárolunk, csúcsokat külön tároljuk, éleket hogy reprezentáljuk(honnan hová), hozzá tároljuk a címkét
-1. map 
-  1. map alapú adatréteg bemutatása
-  szerver,
-  uml class diagram szerű modell bemutatás
-
-1. kiértékelés  
-  |  
-  teljesítmény (betöltések vizsgálata, lekérdezések)
-  különböző erl alkalmazásokat adtam hozzá, szemantikus lekérdezéseket futtattam  
-  |  
-  helyesség vizsgálat __módszere__: összehasonlító megvolt, callback-et megvalósítottam
-1. össezfoglaló: ugyne elmarad a C++tól, de a mnesiatól jobb
-1. továbbfejlesztési lehetőség
-
-Melinda jegyzete:
-
-1. Cimlap - 3 mondatban elmondod, hogy mivel foglalkoztal (hatékony, in-memory, statikus elemzés, tárolási modell)
-1. Motiváció - RfactorErl (Erlang statikus elemző). SPG reprezentál, adatbázis réteg (tárol) - IDE - tegyük lightweight
-1. ++ részletekről dia (rétegek, SPG)
-1. Modell kiválasztása: milyen vizsgálatokat csináltál
-1. Map alapú adatréteg bemutatása 
-1. Eredmények értékelése
-1. Helyesség vizsgálat módszere
-1. Összefoglaló
-
-# Q&A 
-Miért nem módosítás? - törlés hasonló eredményeket produkált, így nem hozott be új információt.
-
-Miért nem Array? - Nagy megkötésnek éreztük az integer key-t
-
-# bizottság
-Kozsik Tamás elnök
-Laki Sándor
-Kaposi Ambrus
-Sinkovics Ábel külső tag
 
 
 # 0 Címdia
@@ -98,6 +54,12 @@ Memóriahasználat
 A map és az array tűnt ígéretes megoldásnak, de az array-ek esetén kizárólag egész számok használhatók kulcsként, amit túl nagy limitációnak tartottunk, így a map-et választottuk.
 
 # 5 Map alapú adatréteg
+## Adatmodell
+```
+
+```
+
+## Architektúra
 - architektúra ábra
 - rétegek bemutatása
 - refcore_gendb - meghatározza az adatréteg funkcióit
@@ -122,15 +84,32 @@ Adatok konzisztenziáját ellenőrzi
 A RefactorErl rendelkezett egy teszt interfésszel az adatrétegek összehasonlítására. Egy callback modult kellett megvalósítanom a map alapú adatréteghez kapcsolódva. A teszt futtatásához 3 RefactorErl példányt kell elindítani. 2 különböző adatrétegeket futtat, a harmadik pedig összehasonlítja azok működését. Ehhez a callback modulok függvényeinek eredményét hasonlítja össze és ez alapján járja be a gráf egy adott részét.
 
 # 8 Összefoglaló
-
+1. termevzés
+2. megvalósítás
+3. kiértékelés
 
 # Válaszdiák
 - path nyelv
 - path algoritmus
 - mérésekről 1-2 táblázat/ábra
 
+# Esetleges kérdések 
+1. Miért nem mértem Erlang struktúrák módosítási idejét?  
+A törlés hasonló eredményeket produkált, így nem hozott be új információt. (Ugyanúgy keresés és felülírás szükséges hozzá.)
 
-# Kérdés kb
-- gb_tree miért nem?
-- Haskell adatstruktúrák, hogy lehetne attrib gráfot ábrázolni?
-- Erlang-Haskell együtt lassú lenne (io)
+1. Miért nem `array` struktúrát használtam?  
+Nagy megkötésnek éreztük az integer key-t. Nem is kulcs-érték párok tárolására való.
+
+1. A `gb_tree` tárolót miért nem vizsgáltam?  
+`TODO` LearnYouSomeErlang
+
+1. Haskell adatstruktúrák, hogy lehetne attrib gráfot ábrázolni?
+
+1. Mi lenne ha Haskell tároló lenne?  
+Erlang-Haskell együtt lassú lenne (io kontextusváltás)  
+Erlang alapú volt a cél kifejezetten &rarr; **függőségmentes**
+
+1. Path nyelvet definiáld Haskellben!  
+```haskell
+-- TODO
+```
