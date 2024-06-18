@@ -55,8 +55,29 @@ A map és az array tűnt ígéretes megoldásnak, de az array-ek esetén kizár�
 
 # 5 Map alapú adatréteg
 ## Adatmodell
-```
+```erlang
+-record(state, {
+    nodes   = #{} :: map(), 
+    edges   = #{} :: map(), 
+    node_id = 0   :: integer(), 
+    edge_id = 1   :: integer()
+}).
 
+-record(node, {
+    id              :: integer(), 
+    class           :: atom(), 
+    data            :: nodeData(), 
+    edges_fwd  = [] :: list(integer()), 
+    edges_back = [] :: list(integer())
+}).
+
+-record(edge, {
+    id   :: integer(), 
+    from :: integer(), 
+    tag  :: atom(), 
+    idx  :: integer(), 
+    to   :: integer()
+}).
 ```
 
 ## Architektúra
