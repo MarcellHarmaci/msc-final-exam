@@ -71,7 +71,7 @@ activities
 # 3. Software Development Models (from Waterfall to Agile and Lean)
 ## Development Models
 ### Waterfall
-![alt text](image.png)
+![alt text](assets/image.png)
 
 1. **Requirements**: project scope, stakeholder expectations, research (e.g., market), assemble team, kickoff (meeting)
 2. **Design**: collect tasks (WBS diagram), create schedule (Gantt diagram)
@@ -82,7 +82,7 @@ activities
 Pitfalll: If something is not understood well. Too rigid, cannot handle problems
 
 ### V-model
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 - Modified Waterfall
 - Has different Levels of Abstraction
 - Pairs development and testing phases (but do not unifies them)
@@ -96,7 +96,7 @@ The disadvantage is that the model is not flexible to changes
   - Evolutionary (prototype becomes product)
   - Merging (or Incremental)
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 Pros:
 - fast
@@ -112,7 +112,7 @@ Cons:
 ### Iterative / Incremental Model
 Starts with a simple implementation of a subset of the requirements and iteratively improves until it is implemented.
 
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 Pros:
 - With every increment, operational product is
@@ -131,24 +131,24 @@ Cons:
 ### Spiral Model
 Waterfall + Prototyping + Iterative (Incremental)
 
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
 ### RAD Model (Rapid Application Development)
 Made for GUI and information systems
 
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 
 ## Software Development Tools
 ### Time Management Matrix
-![alt text](image-6.png)
+![alt text](assets/image-6.png)
 
 
 
 # 4. Software Development Methodologies (Scrum, Kanban, XP, TDD, MDD...)
 
 ## Agile process
-![alt text](image-8.png)
-![alt text](image-7.png)
+![alt text](assets/image-8.png)
+![alt text](assets/image-7.png)
 
 ## Agile methodologies
 ### XP – eXtreme Programming
@@ -157,41 +157,41 @@ Made for GUI and information systems
 - Have an **adaptable** team that can embrace change
 - Are well versed in the technical aspects of coding
 
-![alt text](image-9.png)
+![alt text](assets/image-9.png)
 
 ### Test-driven development (TDD)
-![alt text](image-10.png)
+![alt text](assets/image-10.png)
 
 ### Behavior-driven Development (BDD)
 - Behavioral specifications: user story
 - Tools: Cucumber + Gherkin
 
-![alt text](image-11.png)
+![alt text](assets/image-11.png)
 
 ### Feature Driven Development (FDD)
 - driven from a client-valued functionality
 - Its main purpose is to deliver working software repeatedly in a timely manner in accordance with the Principles behind the Agile Manifesto
 - bottom-up approach
 
-![alt text](image-12.png)
+![alt text](assets/image-12.png)
 
 ### Scrum
 Scrum is a collection of meetings, roles and tools that work together to help teams to better structure and manage their workload.
 
 Based on agile mindset:
 
-![alt text](image-13.png)
+![alt text](assets/image-13.png)
 
 Scrum is a framework to practise using the agile mindset:
 
-![alt text](image-14.png)
+![alt text](assets/image-14.png)
 
 Scrum artifacts:
 1. Product Backlog - master list of work
 2. Sprint Backlog &larr; sprint planning
 3. Increment (or Sprint goal) - definition of “Done”
 
-![alt text](image-15.png)
+![alt text](assets/image-15.png)
 
 Quick releases keep the team motivated and the users happy!
 
@@ -199,7 +199,7 @@ Quick releases keep the team motivated and the users happy!
 - Not as structured as scrum
 - Developed at Toyota
 
-![alt text](image-16.png)
+![alt text](assets/image-16.png)
 
 
 
