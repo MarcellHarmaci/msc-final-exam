@@ -17,21 +17,21 @@
 # 0 Címdia
 Jó napot kívánok és üdvözlöm a bizottságot! Harmaci Marcell vagyok és a diplomamunkám során a statikus elemzést támogató hatékony adattárolási módszerekkel foglalkoztam a RefactorErl, Erlang programok elemzésére alkalmas szoftver környezetében.
 
-az Erlang nyelv és a RefactorErl statikus elemző szoftver adattárolási módszereinek vizsgálatával és egy saját  adattároló modell megalkotásával foglalkoztam, melynek segítségével egy gyors in-memory adatbázis hozható létre.
-
 
 # 1 Motiváció
 1. A RefactorErl a programok elemzésekor sok adatot gyűjt a forráskódról és ezeket egy adatbázisban tárolja el.
 1. Többféle fejlesztőkörnyezetbe is már integrálásra került.
 (Például Vim, Emacs, Eclipse, VS Code és IntelliJ IDEA)
-1. Az Erlang LS alapú, VS Code-os diagnosztikák integrácija során merült fel az igény egy "könnyűsúlyú" in-memory adatbázis felé. (Fontos szempont volt a függőségmentesség megőrzése, így Erlang alapú megoldásra volt szükség.)
+1. Az Erlang LS alapú, VS Code-os **diagnosztikák** integrácija során merült fel az igény egy "könnyűsúlyú" in-memory adatbázis megléte iránt. (Fontos követelmény volt a függőségmentesség megőrzése, így Erlang alapú megoldásra volt szükség.)
 
 
 # 2 Részletek
 1. Itt látható a RefactorErl szoftver belső felépítése:  
-A felső rétegekban található a felhasználói interfészek, a középsőkben az üzleti logika, valamint az alsókban az adattárolás megvalósítása.
+&rarr; A felső rétegekban található a felhasználói interfészek,  
+&rarr; a középsőkben az üzleti logika,  
+&rarr; valamint az alsókban az adattárolás megvalósítása.
 1. A szoftver a programkódot egy szemantikus programgráfként reprezentálja:  
-&rarr; A programgráf egy élcímkézett attribútumgráf.  
+&rarr; Ez egy élcímkézett attribútumgráf.  
 &rarr; A programkód alkotóelemeit a gráf csúcsai, a köztük fennálló kapcsolatkoat pedig az élek fejezik ki.  
 &rarr; 3 rétegből áll: lexikai, szintaktukus és szemantikus adatokat egyaránt tartalmaz.  
 &rarr; Ez alapján az eredeti kód teljes mértékben visszaállítható, illetve a tárolt adatokon lekérdezések és refaktorálások hajthatók végre.  
@@ -39,8 +39,8 @@ A felső rétegekban található a felhasználói interfészek, a középsőkben
 
 
 # 3-4 Megfelelő adatstruktúra kiválasztása
-1. A munkám megkezdésekor megvizsgáltam az Erlang nyelv által nyújtotta, kulcs-érték párok tárolására alkalmas struktúrákat. ()
-1. 3 mérést végeztem el azok a műveleti sebességek vizsgálatához.  
+1. A munkám megkezdésekor megvizsgáltam az Erlang nyelv által nyújtotta, kulcs-érték párok tárolására alkalmas struktúrákat.
+1. 3 db mérést végeztem el azok a műveleti sebességek vizsgálatához.  
 &rarr; Megvizsgáltam a lista, array, map, ets tábla, irányított gráf és dictionary struktúrákat.  
 &rarr; A dictionary már az első mérésen jelentősen rosszabbul teljesített, mint a többi struktúra, így azzal további méréseket nem folytattam.  
 &rarr; A 2. mérés eredményein az látható, hogy az array gyorsan szúrja be az adatokat, a map pedig gyorsan olvassa azokat.  
