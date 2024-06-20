@@ -275,7 +275,7 @@ instance.method(); // calls Child's implementation
 ```
 
 #### Message passing
-
+Immutability, message passing bw Erlang nodes ...
 
 ### SOLID principles
 - **S** - Single Responsibility Principle
@@ -284,12 +284,23 @@ instance.method(); // calls Child's implementation
 - **I** - Interface Segregation Principle
 - **D** - Dependency Inversion Principle
 
-### Refactoring &larr; **!!! IMPORTANT !!!**
-### Class Normalization
+### Refactoring **(IMPORTANT)**
+No external behavior change, but improve
+- Readability
+- Ease of understanding (lower complexity)
+- Extensibility
+- Maintainability
+
+Program transformations
+- Rename
+- Extract method
+- Move to file...
+- Unused variable
+
+IDE tools
+
 ### Design Patterns
 
-### OOA (Object-Oriented Analysis)
-### UML (Unified Modeling Language)
 
 ## Dependency Injection
 
